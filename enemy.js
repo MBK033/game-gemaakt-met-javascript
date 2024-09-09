@@ -22,7 +22,8 @@ class Boss extends Sprite{
         this.swordheight = this.position.y;
         this.sword = { position: { x: 660, y: 100 }, width: 400, height: 20 };
 
-        this.health = 10;
+        this.health = 100;
+        this.dead = false;
 
         this.offset = offset;
         this.framesCurrent = 0;
@@ -39,6 +40,7 @@ class Boss extends Sprite{
         document.querySelector('#enemyHealth').style.width = enemy.health +'%'
         console.log("enemy health: " + this.health);
         if (this.health <= 0) {
+            this.dead = true;
             document.querySelector('.alertBox').classList.add('visible');
           }
 
@@ -53,7 +55,12 @@ class Boss extends Sprite{
     }
 
     update() {
-        
+        if (this.dead) {
+            // If the enemy is dead, stop updating its position and actions
+            console.log("Enemy is dead. No more actions.");
+            return;  // Exit early if the enemy is dead
+        }
+
         const swordOffset = isAttacking2 ? 145 : -40;
         this.sword.position.y = this.position.y + swordOffset;
         
@@ -67,6 +74,7 @@ class Boss extends Sprite{
         this.drawSword();
     }    
 }
+
 
 
 const enemy = new Boss({
