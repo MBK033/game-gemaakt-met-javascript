@@ -23,10 +23,7 @@ class Boss extends Sprite{
         this.sword = { position: { x: 660, y: 100 }, width: 400, height: 20 };
 
         this.health = 100;
-<<<<<<< HEAD
-=======
         this.dead = false;
->>>>>>> 776ace2c93a4ec0002f4ff2e51d695abbeca9a31
 
         this.offset = offset;
         this.framesCurrent = 0;

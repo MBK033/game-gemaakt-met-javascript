@@ -25,13 +25,10 @@ class Character extends Sprite {
         this.health = 100;
         this.dead = false; // Add dead property for the player
 
-<<<<<<< HEAD
         this.sword = {width: 80, height: 20, position: {x: 0, y: 0}};
         
         this.health = 100;
         
-=======
->>>>>>> 776ace2c93a4ec0002f4ff2e51d695abbeca9a31
         this.attackOnCooldown = false;
         this.offset = offset;
         this.framesCurrent = 0;
