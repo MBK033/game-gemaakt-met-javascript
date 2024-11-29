@@ -5,6 +5,9 @@
     src: local('PixelatedFont'), url('fonts/MinecraftRegular-Bmg3.otf') format('woff2'), url('/fonts/PixelatedFont.woff') format('woff');
   }
 
+/* Add styles for the canvas container */
+
+
 .redContainer {
     position: relative;
     display: inline-block

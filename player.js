@@ -22,7 +22,7 @@ class Character extends Sprite {
 
         this.sword = {width: 80, height: 20, position: {x: 0, y: 0}};
         
-        this.health = 10;
+        this.health = 100;
         
         this.attackOnCooldown = false;
         this.offset = offset;
